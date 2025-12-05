@@ -1,0 +1,54 @@
+/* Center the login container in the middle of the page */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+}
+
+/* Card style for the login form */
+.login-card {
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  width: 350px;
+  text-align: center;
+}
+
+/* Title */
+.login-card h2 {
+  margin-bottom: 1.5rem;
+  /* color: #333; */
+}
+
+/* Inputs */
+.login-card input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  /* border: 1px solid #ccc; */
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.login-card input:focus {
+  border-color:coral;
+  /* box-shadow: 0 0 4px rgba(37, 117, 252, 0.4); */
+}
+
+/* Button */
+.login-card button {
+  width: 100%;
+  padding: 0.75rem;
+  /* background-color: coral; */
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-card button:hover {
+  background-color: cornflowerblue;
+}

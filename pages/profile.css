@@ -1,0 +1,46 @@
+
+.profile-card {
+  /* background-color: cadetblue; */
+  display: flex;
+  justify-content:space-evenly;
+}
+.pr{
+    /* background-color: yellow; */
+}
+.profile-card .na {
+    margin-bottom: 10px;
+    /* background-color: lime; */
+    width:300px;
+    margin-right: 100px;
+    
+}
+
+.na button{
+    padding:8px 16px;
+    border:none;
+    background-color:#0095f6;
+    color:white;
+    border-radius:4px;
+    font-weight:600;
+    cursor:pointer;
+}
+.na button:hover{
+    background-color:whitesmoke;
+    color:#0095f6;
+}
+
+.follo{
+    display: flex;
+    margin-right: 300px;
+    /* background-color: red; */
+    column-gap: 20px;
+    font-size: 20px;
+    margin-top: 80px;
+    font-weight: 600;
+}
+.d{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+}

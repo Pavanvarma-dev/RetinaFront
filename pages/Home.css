@@ -1,0 +1,48 @@
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+}
+.profile{
+    display: flex;
+    padding:5px;   
+    /* background-color: bisque; */
+    margin-top: 20px;
+}
+
+.follow{
+    margin-left: 400px;
+    /* background-color: aqua; */
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:5px;
+    cursor: pointer;
+    border-radius: 5px
+}
+
+.profile h3{
+    margin-left:20px;;
+}
+
+.profile img{
+    cursor: pointer;
+}
+.randomposts-card{
+    /* background-color: aqua; */
+    margin-top:10px;
+}
+.desc{
+    display: flex;
+    padding:5px;
+    justify-content: space-evenly;
+    width:100px;
+    cursor: pointer;
+
+}
+.randomposts-card p{
+    text-align: center;
+    font-weight:bolder
+}
