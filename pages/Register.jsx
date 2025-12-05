@@ -27,7 +27,7 @@ function Register() {
     if (profilePicture) formData.append('profilePicture', profilePicture); // name must match server
 
     try {
-      const response = await axios.post('http://localhost:3000/auth/register', formData);
+      const response = await axios.post('https://localhost:3000/auth/register', formData);
       console.log('User Registered Successfully', response.data);
       navigate('/login');
     } catch (error) {
