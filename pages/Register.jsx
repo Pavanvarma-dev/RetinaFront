@@ -3,7 +3,7 @@ import React from 'react'
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import "./register.css";
+import "./Register.css";
 import {useAuth} from "./AuthContext"
 
 function Register() {
