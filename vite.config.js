@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
    build: {
     rollupOptions: {  
-      input: 'path/to/index.html'
+      
     }
   }
 })
