@@ -5,7 +5,7 @@ import axios from 'axios'
 import Likes from './Likes.jsx'
 import API from './Api'
 import { useAuth } from './AuthContext'
-import './Posts.css'
+import './posts.css'
 
 function Posts() {
 
