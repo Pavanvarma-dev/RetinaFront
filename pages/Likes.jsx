@@ -4,6 +4,7 @@ import { FaHeart, FaRegHeart } from 'react-icons/fa'
 import axios from 'axios'
 import { useAuth } from './AuthContext'
 import { Form } from 'react-router-dom'
+import API from './Api'
 
 function Likes({ post }) {
   const { token } = useAuth()
@@ -38,7 +39,7 @@ function Likes({ post }) {
 
     try {
           const headers = token ? { Authorization: `Bearer ${token}` } : {};
-      const res = await axios.post(`http://localhost:3000/auth/like/${post.postID}`,formData, { headers });
+      const res = await axios.post(`${API}/auth/like/${post.postID}`,formData, { headers });
     //   console.log(res.data);    
       setIsLiked(res.data.isLiked);
       // sync with server response if provided

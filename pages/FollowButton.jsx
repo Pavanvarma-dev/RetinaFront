@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useAuth } from './AuthContext.jsx'
+import API from './Api.jsx'
 import "./FollowButton.css"
 
 function FollowButton({ currentUserID, profileUserID }) {
@@ -16,7 +17,7 @@ function FollowButton({ currentUserID, profileUserID }) {
       try {
         const headers = token ? { Authorization: `Bearer ${token}` } : {}
         // get list of users currentUserID is following
-        const res = await axios.get(`http://localhost:3000/auth/getfollowing/${currentUserID}`, { headers })
+        const res = await axios.get(`${API}/auth/getfollowing/${currentUserID}`, { headers })
 
         // normalize possible response shapes
         const list = res.data?.following || res.data || []
@@ -42,7 +43,7 @@ function FollowButton({ currentUserID, profileUserID }) {
     try {
       const headers = token ? { Authorization: `Bearer ${token}` } : {}
       // followerID should be the logged-in user
-      await axios.post('http://localhost:3000/auth/follow', {
+      await axios.post(`${API}/auth/follow`, {
         followerID: currentUserID,
         followingID: profileUserID
       }, { headers })

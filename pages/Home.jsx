@@ -6,6 +6,7 @@ import { useAuth } from './AuthContext.jsx'
 import Likes from './Likes.jsx'
 import Comments from './Comments.jsx'
 import { useNavigate } from 'react-router-dom'
+import API from './Api.jsx'
 import FollowButton from './FollowButton.jsx'
 import './Home.css'
 
@@ -23,7 +24,7 @@ const togoprofile = () => {
     try {
 
       const headers = token ? { Authorization: `Bearer ${token}` } : {};
-      const response = await axios.get(`http://localhost:3000/auth/randomposts`,{ headers });  
+      const response = await axios.get(`${API}/auth/randomposts`,{ headers });  
       console.log("random posts",response.data);
       
       setPosts(response.data);  

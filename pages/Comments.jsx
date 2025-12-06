@@ -4,6 +4,7 @@ import axios from 'axios'
 import { useAuth } from './AuthContext.jsx'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import API from './Api.jsx';
 
 function Comments({post}) {
     const {userID,token} = useAuth();
@@ -16,7 +17,7 @@ function Comments({post}) {
         if (!comment) return;
         try {
           const headers = token ? { Authorization: `Bearer ${token}` } : {}
-          const response = await axios.post(`http://localhost:3000/auth/toPostComments/${post.postID}`,{comment},{ headers });
+          const response = await axios.post(`${API}/auth/toPostComments/${post.postID}`,{comment},{ headers });
           console.log('User added POst  Successfully', response.data);
           naviagte('/posts');
         } catch (err) {

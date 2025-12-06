@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from './AuthContext.jsx';
 import { useNavigate } from 'react-router-dom';
 import { FaUserCircle } from "react-icons/fa";
+import API from './Api';
 import { useState } from 'react';
 function Login() {
 
@@ -24,7 +25,7 @@ const toSubmit = async (e) => {
                 password:password
         }
 
-   const response = await  axios.post('http://localhost:3000/auth/login', userDetails)
+   const response = await  axios.post(`${API}/auth/login`, userDetails)
      localStorage.setItem("token", response.data.token)
         console.log("token",response.data.token);
       

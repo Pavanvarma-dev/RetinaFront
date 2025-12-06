@@ -8,7 +8,7 @@
 
 /* Card style for the login form */
 .login-card {
-  background-color: #ccc;
+  /* background-color: #ccc; */
   padding: 2rem 3rem;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);

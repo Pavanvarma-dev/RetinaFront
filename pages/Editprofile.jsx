@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useAuth } from './AuthContext.jsx'
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import API from './Api.jsx';
 
 function Editprofile() {
     const {userID,token} = useAuth();
@@ -25,7 +26,7 @@ function Editprofile() {
         if(userID)formData.append('userID', userID);
         try {
           const headers = token ? { Authorization: `Bearer ${token}` } : {};
-          const response = await axios.post(`http://localhost:3000/auth/editprofile/${userID}`, formData,{ headers });
+          const response = await axios.post(`${API}/auth/editprofile/${userID}`, formData,{ headers });
           console.log('User Profile Updated Successfully', response.data);
           navigate('/profile');
         } catch (err) {

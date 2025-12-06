@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext.jsx';
+import API from './Api';
 
 function AddPosts() {
 
@@ -24,7 +25,7 @@ function AddPosts() {
 
     try {
       const headers = token ? { Authorization: `Bearer ${token}` } : {};
-      const response = await axios.post('http://localhost:3000/auth/posts', formData,{ headers });
+      const response = await axios.post(`${API}/auth/posts`, formData,{ headers });
       console.log('User added POst  Successfully', response.data);
       navigate('/');
     } catch (err) {

@@ -5,6 +5,7 @@ import { useAuth } from './AuthContext.jsx'
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Posts from './Posts.jsx';
+import API from './Api.jsx';
 
 function Profile() {
   const [profile, setProfile] = useState([]);
@@ -15,7 +16,7 @@ function Profile() {
 
    const fetchProfile = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/auth/profile/${userID}`);
+        const response = await axios.get(`${API}/auth/profile/${userID}`);
         console.log(response.data);  
        setProfile(response.data);       
         

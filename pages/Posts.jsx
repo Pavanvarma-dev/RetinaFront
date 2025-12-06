@@ -3,6 +3,7 @@ import {useState,useEffect} from 'react'
 import {FaHeart, FaRegHeart} from 'react-icons/fa'
 import axios from 'axios'
 import Likes from './Likes.jsx'
+import API from './Api'
 import { useAuth } from './AuthContext'
 import './Posts.css'
 
@@ -17,7 +18,7 @@ function Posts() {
     try {
       // console.log(userID);
       
-      const response = await axios.get(`http://localhost:3000/auth/getposts/${userID}`, {
+      const response = await axios.get(`${API}/auth/getposts/${userID}`, {
         headers: {  Authorization: `Bearer ${token}` }
       });  
       // console.log(response.data);  
